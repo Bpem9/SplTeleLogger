@@ -7,7 +7,7 @@ Script is based on "telethon==1.26.1" python library.
 
 Some important credentials collected to main script from environmental variables provided with ```load_dotenv()``` and ```.env``` file, that was deleted for security reasons. So It is necessary for tester to create ```.env``` file near ```config.py``` file, and it must include all essential credentials you get from:   
 • API_ID and API_HASH - Telegram API credentials  
-• SESSION_STRING - Telegram session name, using for login to telegram account without SMS authentification. Obtainable with telethon lib by theese <a name="https://docs.telethon.dev/en/stable/concepts/sessions.html#string-sessions">Instructions</a>  
+• SESSION_STRING - Telegram session name, using for login to telegram account without SMS authentification. Obtainable with telethon lib by theese <a href="https://docs.telethon.dev/en/stable/concepts/sessions.html#string-sessions">Instructions</a>  
 • TEST_CHANNEL_NAME - Well, just the name of the public channel planning to be tested
 
 1.**Asked questions**  
