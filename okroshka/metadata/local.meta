@@ -1,0 +1,27 @@
+[app/ui]
+version = 9.0.3
+modtime = 1675100685.893860000
+
+[app/launcher]
+version = 9.0.3
+modtime = 1675100685.896826000
+
+[]
+access = read : [ * ], write : [ * ]
+export = none
+version = 9.0.3
+modtime = 1675199419.399473000
+
+[nav/default]
+version = 9.0.3
+modtime = 1675202077.251598000
+
+[indexes/telethon]
+owner = admin
+version = 9.0.3
+modtime = 1675204109.924177000
+
+[inputs/script%3A%2F%2F%24SPLUNK_HOME%2Fetc%2Fapps%2Fokroshka%2Fbin%2Fmain.py]
+owner = admin
+version = 9.0.3
+modtime = 1675206448.807958000
