@@ -42,10 +42,11 @@ async def get_changes():
             log_obj = await LogObj.get_log(event, 'message')
         else:
             log_obj = await LogObj.get_log(event, 'chat')
+        print(str(log_obj))
     for event in admin_events:
         log_obj = await LogObj.get_log(event, 'admin')
         print(str(log_obj))
-    return log_obj
+
 
 if __name__ == '__main__':
     # with client:

@@ -14,7 +14,7 @@ class AdminLog(LogFactory):
     def __init__(self, event):
         self.event = event
         self.event_dict = {
-            'date': event.date.strftime('%d.%m.%Y./%H:%M:%S'),
+            'date': event.date.strftime('%d.%m.%Y/%H:%M:%S'),
             'user_id': event.new.user_id if hasattr(event.new, 'user_id') else '-',
             'responsible': event.user_id
         }
@@ -50,20 +50,20 @@ class ChatLog(LogFactory):
         if self.event.changed_title:
             self.event_dict.update({'incident': 'New_title', 'new_title': self.event.new})
         if self.event.user_added:
-            self.event_dict.update({'incident': 'User_added_by_admin', 'new_title': self.event.new})
+            self.event_dict.update({'incident': 'User_added_by_admin'})
         if self.event.user_left:
-            self.event_dict.update({'incident': 'User_left', 'new_title': self.event.new})
+            self.event_dict.update({'incident': 'User_left'})
         if self.event.user_kicked:
-            self.event_dict.update({'incident': 'User_kicked_by_admin', 'new_title': self.event.new})
+            self.event_dict.update({'incident': 'User_kicked_by_admin'})
         return self.event_dict
 
 class MessageLog(LogFactory):
     def __init__(self, event):
-        user = event.sender
+        user = event.sender.id
         self.event = event
         self.event_dict = {
             'date': self.event.date.strftime('%d.%m.%Y/%H:%M:%S'),
-            'user-d': user,
+            'user_id': user,
             'incident': 'New_message',
         }
 

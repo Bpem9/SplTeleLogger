@@ -16,8 +16,11 @@ class LogObj:
         """
         string = ''
         for key, value in self.__dict__.items():
-            string += f' {key}={value}'
-        return string
+            if key == 'date':
+                string = f'{value}'
+            else:
+                string += f', {key}="{value}"'
+        return string.strip(' ,')
 
     @classmethod
     async def _get_admin_log(cls, event):
