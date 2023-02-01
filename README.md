@@ -1,6 +1,6 @@
 # SplTeleLogger
 
-Hello and welcome to README file of telegram logging python script within the Splunk "okroshka" app
+Hello and welcome to repository of telegram logging python script within the Splunk "okroshka" app.  
 Script is based on "telethon==1.26.1" python library. 
 
 0.**A pile of absolutly important information**
